@@ -33,10 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+#         NON BASE GEMS AFTER THIS LINE
 #Bootstrap for page styling
 gem 'bootstrap-sass'
 #Figaro for security of private information
 gem 'figaro', '1.0'
+#Devise for user authentication
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
