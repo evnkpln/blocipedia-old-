@@ -1,11 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe WikisController, type: :controller do
+
+  # let(:my_user) { User.create!(email: 'example@example.com', password: 'helloworld', password_confirmation: 'helloworld') }
+  # let(:my_wiki) { Wiki.create!(title: "hello!", body: "noooo!", user: my_user)}
   let(:my_user) { create(:user) }
   let(:my_wiki) { create(:wiki, user: my_user) }
   
   describe "GET index" do
     it "returns http success" do
+      # p my_wiki
       get :index
       expect(response).to have_http_status(:success)
     end
