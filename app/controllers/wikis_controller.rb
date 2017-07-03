@@ -27,7 +27,7 @@ class WikisController < ApplicationController
   end
   
   def edit
-    @wiki = Wiki.new
+    @wiki = Wiki.find(params[:id])
   end
   
   def update
@@ -39,6 +39,18 @@ class WikisController < ApplicationController
       redirect_to action: :index
     else
       flash.now[:alert] = "There was an error saving the wiki. Please try again."
+      render :show
+    end
+  end
+  
+  def destroy
+    @wiki = Wiki.find(params[:id])
+    
+    if @wiki.destroy
+      flash[:notice] = "Wiki was successfuly deleted"
+      redirect_to action: :index
+    else
+      flash.now[:alert] = "Theere was an error deleting the wiki. Please try again or check your permissions."
       render :show
     end
   end
