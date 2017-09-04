@@ -29,6 +29,5 @@ module Blocipedia
     config.generators.system_tests = nil
     
     
-    config.web_console.whitelisted_ips = '10.240.0.110'
   end
 end

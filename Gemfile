@@ -38,23 +38,23 @@ gem 'jbuilder', '~> 2.5'
 #Bootstrap for page styling
 gem 'bootstrap-sass'
 #Figaro for security of private information
-gem 'figaro', '1.0'
+gem 'figaro'
 #Devise for user authentication
 gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'shoulda'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_girl_rails'
   gem 'faker'
   gem 'rails-controller-testing'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
